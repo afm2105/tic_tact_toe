@@ -57,7 +57,7 @@ $( document ).ready(function() {
   }
 
   var conditions = [
-    [square1, square2, square3],
+    [square1,square2,square3],
     [square4, square5, square6],
     [square7, square8, square9],
     [square1, square4, square7],
@@ -65,20 +65,23 @@ $( document ).ready(function() {
     [square3, square6, square9],
     [square1, square5, square9],
     [square3, square5, square7]
+
   ];
 
   function checkWinner() {
-    for (var i=0; i<conditions.length; i ++) {
-      if ((conditions[i][0].textContent == conditions[i][1].textContent) && (conditions[i][1].textContent == conditions[i][2].textContent) && ( conditions[i][0].textContent !== "")) {
-        console.log("There is a winner!");
+    for (var i = 0; i<conditions.length; i ++) {
+      if ((conditions[i][0].textContent == conditions[i][1].textContent) && (conditions[i][1].textContent == conditions[i][2].textContent) && conditions[i][0].textContent !== "") {
+        alert("We have a winner!");
       }
     }
+
   }
 
-  function declareWinner() {
-    console.log("checking if there is a winner");
-    if ((((((square1.textContent) == (square2.textContent)) && ((square2.textContent) == (square3.textContent))) && (click>2)) || ((((square4.textContent) == (square5.textContent)) && ((square5.textContent) == (square6.textContent))) && (click>2))) || (((((square7.textContent) == (square8.textContent)) && ((square8.textContent) == (square9.textContent))) && (click>2)))){
-      alert ("We have a winner!");
-    }
-  }
+  //
+  // function declareWinner() {
+  //   console.log("checking if there is a winner");
+  //   if ((((((square1.textContent) == (square2.textContent)) && ((square2.textContent) == (square3.textContent))) && (click>2)) || ((((square4.textContent) == (square5.textContent)) && ((square5.textContent) == (square6.textContent))) && (click>2))) || (((((square7.textContent) == (square8.textContent)) && ((square8.textContent) == (square9.textContent))) && (click>2)))){
+  //     alert ("We have a winner!");
+  //   }
+  // }
 });
